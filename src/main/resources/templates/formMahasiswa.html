@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Create Mahasiswa | Page</title>
+    <title>Form Mahasiswa | Page</title>
     <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" />
   </head>
   <body>
@@ -38,7 +38,7 @@
     </nav>
 
     <div class="container">
-      <h1>Create Mahasiswa</h1>
+      <h1>form Mahasiswa</h1>
       <div class="col-sm-8">
         <form
           th:object="${mahasiswa}"
@@ -46,6 +46,7 @@
           method="post"
         >
           <input type="hidden" th:field="*{id}" />
+          <input type="hidden" th:field="*{version}" />
 
           <div class="form-group">
             <label class="col-sm-2 control-label">Nama :</label>

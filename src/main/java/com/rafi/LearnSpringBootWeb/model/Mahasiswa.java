@@ -1,9 +1,11 @@
 package com.rafi.LearnSpringBootWeb.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Version;
 
 @Entity
 public class Mahasiswa {
@@ -13,6 +15,9 @@ public class Mahasiswa {
     private Integer nim;
     private String email;
     private String jurusan;
+
+    @Version @Column(name="optVersion", columnDefinition = "integer DEFAULT 0")
+    private Integer version;
 
     public Integer getId() {
         return id;
@@ -52,5 +57,13 @@ public class Mahasiswa {
 
     public void setJurusan(String jurusan) {
         this.jurusan = jurusan;
+    }
+
+    public Integer getVersion() {
+        return version;
+    }
+
+    public void setVersion(Integer version) {
+        this.version = version;
     }
 }
