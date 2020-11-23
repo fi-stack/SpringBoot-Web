@@ -7,7 +7,7 @@ import javax.persistence.Id;
 
 @Entity
 public class Mahasiswa {
-    @Id @GeneratedValue(strategy = GenerationType.AUTO)
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String nama;
     private Integer nim;
