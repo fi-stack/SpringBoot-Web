@@ -10,6 +10,11 @@ public class HomeController {
         return "index";
     }
 
+    @RequestMapping("/mahasiswa")
+    public String mahasiswa() {
+        return "mahasiswa";
+    }
+
     @RequestMapping("/about")
     public String about() {
         return "about";
