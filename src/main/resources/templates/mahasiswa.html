@@ -62,6 +62,12 @@
                 class="btn btn-sm btn-success"
                 >Edit</a
               >
+              <a
+                th:href="${'/mahasiswa/hapus/' + m.id}"
+                class="btn btn-sm btn-danger"
+                onclick="return confirm('yakin?')"
+                >Hapus</a
+              >
             </td>
           </tr>
         </table>

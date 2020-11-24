@@ -42,4 +42,10 @@ public class MahasiswaController {
         model.addAttribute("mahasiswa", mahasiswaService.getIdMahasiswa(id));
         return "formMahasiswa";
     }
+
+    @RequestMapping(value = "/mahasiswa/hapus/{id}")
+    public String hapus(@PathVariable Integer id) {
+        mahasiswaService.hapus(id);
+        return "redirect:/mahasiswa";
+    }
 }
